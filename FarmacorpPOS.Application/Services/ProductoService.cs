@@ -46,7 +46,8 @@ public class ProductoService : IProductoService
         {
             Costo = costo,
             Stock = stock,
-            UniqueCodigo = UniqueCodeGenerator.Generate()
+            UniqueCodigo = UniqueCodeGenerator.Generate(),
+            FechaRegistro = DateTime.Now
         };
 
         await _productoRepository.AddAsync(producto);

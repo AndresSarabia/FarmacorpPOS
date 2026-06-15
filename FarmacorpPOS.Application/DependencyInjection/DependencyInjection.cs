@@ -17,11 +17,9 @@ public static class DependencyInjection
 
         services.AddScoped<IVentaService, VentaService>();
 
-        services.AddScoped<IPriceStrategy, BasePriceStrategy>();
+        services.AddScoped<ICategoriaService, CategoriaService>();
 
-        services.AddScoped<IDiscountStrategy, BaseDiscountStrategy>();
-
-        services.AddScoped<IStockStrategy, BaseStockStrategy>();
+        services.AddScoped<ICodigoBarraService, CodigoBarraService>();
 
         return services;
     }

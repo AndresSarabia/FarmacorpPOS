@@ -27,6 +27,10 @@ public static class DependencyInjection
 
         services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
 
+        services.AddScoped<IProductoCategoriaRepository, ProductoCategoriaRepository>();
+
+        services.AddScoped<ICodigoBarraRepository, CodigoBarraRepository>();
+
         return services;
     }
 }
