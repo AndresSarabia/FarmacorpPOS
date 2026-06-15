@@ -18,5 +18,28 @@ public class TipoProductoConfiguration : IEntityTypeConfiguration<TipoProducto>
         builder.Property(x => x.Descripcion)
             .HasMaxLength(100)
             .IsRequired();
+
+        builder.HasData(
+            new TipoProducto
+            {
+                IdTipoProducto = 1,
+                Descripcion = "Medicamento"
+            },
+            new TipoProducto
+            {
+                IdTipoProducto = 2,
+                Descripcion = "Cosmético"
+            },
+            new TipoProducto
+            {
+                IdTipoProducto = 3,
+                Descripcion = "Higiene"
+            },
+            new TipoProducto
+            {
+                IdTipoProducto = 4,
+                Descripcion = "Suplemento"
+            }
+        );
     }
 }
